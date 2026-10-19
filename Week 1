@@ -1,0 +1,98 @@
+package com.mycompany.javaweek1;
+
+/**
+ *
+ * Personal Profile Printer
+ */
+public class JavaWeek1 {
+
+    public static void main(String[] args) {
+        
+        int age = 19;
+        double height = 1.58;
+        char initial = 'M';
+        boolean StudentStatus = true;
+        String fullName= "Micaela Joanna B. Amit";
+        
+        System.out.println("Fullname: " + fullName);
+        System.out.println("Age:" + age);
+        System.out.println("Height:" + height);
+        System.out.println("Initial:" + initial);
+        System.out.println("Student Status:" + StudentStatus);
+        
+        /** ================================================== **/
+        /** Type-Safe  shopping calculator **/
+        
+        System.out.println("\n ___________________");
+        
+        int quantity = 3;
+        double unitPrice = 49.50;
+        String StoreName = "School Supples Store";
+        double totalCost = quantity * unitPrice;
+        
+        System.out.println("Store Name: " + StoreName); 
+        System.out.println("quantity:" + quantity);
+        System.out.println("Unit price:" + unitPrice);
+        System.out.println("Total cost:" + totalCost);
+                
+         /** ================================================== **/
+        /** Unit Casting Converter **/
+        
+        System.out.println("\n ___________________");
+        
+        double centimeters = 143.4;
+        int WholeMeters = (int) centimeters / 100;
+        double remaincentimeters = centimeters - (WholeMeters * 100);
+        
+        System.out.println("Centimeters: " + centimeters);
+        System.out.println("Whole meters: " + WholeMeters);
+        System.out.println("Remaining centimeters" + remaincentimeters);
+        
+        double decimalValue = 25.75;
+        int narrowedValue = (int) decimalValue;
+        
+        System.out.println("Original Double: " + decimalValue);
+        System.out.println("After narrowing to int : " + narrowedValue);
+        
+        /** ================================================== **/
+        /** Overflow & Reference Investigator  **/
+        
+        System.out.println("\n ___________________");
+
+        byte number = 127;
+        number++;
+
+        System.out.println("Byte after overflow: " + number);
+
+        String text1 = new String("Hello");
+        String text2 = new String("Hello");
+        String text3 = "Hello";
+        String text4 = "Hello";
+
+        System.out.println("text1 == text2: " + (text1 == text2));
+        System.out.println("text1.equals(text2): " + text1.equals(text2));
+
+        System.out.println("text3 == text4: " + (text3 == text4));
+        System.out.println("text3.equals(text4): " + text3.equals(text4));
+
+        // text1 and text2 are different String objects,
+        // so == is false. equals() compares their actual text,
+        // so it is true.
+
+        // text3 and text4 refer to the same string literal in the
+        // String pool, so == is true. equals() is also true because
+        // their text contents are the same.
+
+        int[] array1 = {10, 20, 30};
+        int[] array2 = array1;
+
+        array2[0] = 99;
+
+        System.out.println("Array 1 first value: " + array1[0]);
+        System.out.println("Array 2 first value: " + array2[0]);
+
+        // array1 and array2 refer to the same array object.
+        // Therefore, changing array2 also changes what array1 sees.
+    
+    } 
+}
