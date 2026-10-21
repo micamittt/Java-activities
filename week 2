@@ -1,1 +1,98 @@
+package com.mycompany.javaweek2;
 
+/**  @Author : Micaela Joanna B. Amit
+ * Y/S: DIT 2-6
+ *
+ *  Four-Function Calculator
+ */
+
+import java.util.Scanner;
+
+public class JavaWeek2 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Enter first number: ");
+        int num1 = input.nextInt();
+
+        System.out.print("Enter second number: ");
+        int num2 = input.nextInt();
+
+        System.out.println("Addition: " + (num1 + num2));
+        System.out.println("Subtraction: " + (num1 - num2));
+        System.out.println("Multiplication: " + (num1 * num2));
+        System.out.println("Division: " + (num1 / num2));
+        System.out.println("Modulus: " + (num1 % num2));
+
+        // With negative operands, division truncates toward zero,
+        // while the remainder keeps the sign of the dividend.
+
+        /** ================================================== **/
+        /** Grade Threshold Checker **/
+
+        System.out.println("\n ___________________");
+
+        System.out.print("Enter average grade: ");
+        double average = input.nextDouble();
+
+        System.out.print("Enter number of absences: ");
+        int absences = input.nextInt();
+
+        boolean passed = (average >= 75 && absences <= 3) || average >= 90;
+
+        if (passed) {
+            System.out.println("PASS");
+            System.out.println("Reason: The student meets the required grade and attendance condition.");
+        } else {
+            System.out.println("FAIL");
+            System.out.println("Reason: The student does not meet the required grade and attendance condition.");
+        }
+
+        /** ================================================== **/
+        /** Compound Growth & Increment Tracker **/
+
+        System.out.println("\n ___________________");
+
+        double balance = 1000;
+
+        balance += 200;
+        System.out.println("After first increase: " + balance);
+
+        balance *= 1.10;
+        System.out.println("After 10% growth: " + balance);
+
+        balance += 500;
+        System.out.println("After second increase: " + balance);
+
+        int count = 5;
+
+        System.out.println("count++ result: " + count++);
+        System.out.println("count after count++: " + count);
+
+        System.out.println("++count result: " + ++count);
+        System.out.println("count after ++count: " + count);
+
+        // count++ uses the current value first, then increases it by 1.
+        // ++count increases the value first, then uses the new value.
+
+        /** ================================================== **/
+        /** Precedence Puzzle Solver **/
+
+        // Prediction: 17
+        int result1 = 5 + 3 * 4;
+        System.out.println("Expression 1: " + result1);
+
+        // Prediction: true
+        boolean result2 = 10 > 5 && 8 + 2 == 10;
+        System.out.println("Expression 2: " + result2);
+
+        // count is already 7 at this point.
+        // count++ uses 7 first, then increases it to 8.
+        // Therefore, 7 + 2 = 9.
+
+        int result3 = count++ + 2;
+        System.out.println("Expression 3: " + result3);
+
+        input.close();
+    }
+}
