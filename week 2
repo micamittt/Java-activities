@@ -77,6 +77,8 @@ public class JavaWeek2 {
 
         /** ================================================== **/
         /** Precedence Puzzle Solver **/
+        
+        System.out.println("\n ___________________");
 
         // Prediction: 17
         int result1 = 5 + 3 * 4;
@@ -89,7 +91,6 @@ public class JavaWeek2 {
         // count is already 7 at this point.
         // count++ uses 7 first, then increases it to 8.
         // Therefore, 7 + 2 = 9.
-
         int result3 = count++ + 2;
         System.out.println("Expression 3: " + result3);
 
